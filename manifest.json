@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Rasterize",
+  "version": "0.1.0",
+  "description": "Live hex color preview that follows your cursor, like the built-in Firefox eyedropper. But for ALL browsers! Keep in mind, extensions like these are required specific permissions, as they need to read exact pixel colors. Bug reports and feature requests are appreciated! Contact me at, 'milanvperets@gmail.com'! Again, bug reports and features are appreciated, as they help me improve the extension for better user experience, ability, and accessibility. Support for other browsers is being worked on, please be patient. Thank you for your support and understanding. See you soon! - Cheers!",
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "activate-eyedropper": {
+      "suggested_key": { "default": "Alt+Shift+E" },
+      "description": "Activate the eyedropper"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rasterize@milanvperets.gmail.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

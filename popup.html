@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 220px; margin: 0; font: 13px/1.4 -apple-system, Segoe UI, sans-serif; background: #1e1e1e; color: #eee; }
+  .wrap { padding: 14px; }
+  h1 { font-size: 14px; margin: 0 0 10px; }
+  button {
+    width: 100%; padding: 10px; border: none; border-radius: 6px;
+    background: #434344; color: #fff; font-size: 13px; cursor: pointer;
+  }
+  button:hover { background: #252525; }
+  .last { margin-top: 12px; display: flex; align-items: center; gap: 8px; }
+  .sw { width: 20px; height: 20px; border-radius: 4px; border: 1px solid #444; }
+  .hex { font-family: monospace; }
+  .hint { margin-top: 10px; font-size: 11px; color: #999; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Reactive Eyedropper</h1>
+    <button id="pick">Pick Color</button>
+    <div class="last" id="last" style="display:none">
+      <div class="sw" id="sw"></div>
+      <span class="hex" id="hex"></span>
+    </div>
+    <div class="hint">Move mouse to preview, click to copy color to clipboard, Escape key to cancel.</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
